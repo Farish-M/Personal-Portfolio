@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Farish</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/blog.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Farish</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="blog-header-content">
+            <h1>My Blog</h1>
+            <p>Thoughts, tutorials, and insights on web development and design</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="blog-section">
+        <div class="blog-container">
+            <!-- Search and Filter Bar -->
+            <div class="blog-controls">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="tutorial">Tutorials</button>
+                    <button class="filter-btn" data-category="javascript">JavaScript</button>
+                    <button class="filter-btn" data-category="design">Design</button>
+                    <button class="filter-btn" data-category="career">Career</button>
+                </div>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No articles found. Try a different search term or filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="../src/components/pages/blog-js/blogData.js"></script>
+    <script src="../src/components/pages/blog-js/blog.js"></script>
+</body>
+</html>
