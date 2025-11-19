@@ -3,13 +3,22 @@
         padding: 0;
         box-sizing: border-box;
     }
+    
+    :root {
+        --font-family: Monospace, "Times New Roman", Times, serif;
+
+        --primary-colour: #63ADF2;
+        --secondary-colour:#A7CCED;
+        --text-colour: #000;
+        --background-colour: #fff;
+    }
 
     html {
         scroll-behavior: smooth;
     }
 
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: var(--font-family);
         color: #333;
         overflow-x: hidden;
     }
@@ -22,18 +31,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(0, 0, 0, 0.95);
+        background: var(--background-colour);
         backdrop-filter: blur(10px);
         z-index: 1000;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 20px rgba(255, 255, 255, 0.192);
         transition: all 0.3s ease;
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 16px;
         font-weight: bold;
         letter-spacing: 1px;
-        color: #7353BA;
+        color: var(--text-colour);
+        background: rgb(from var(--primary-colour) r g b / 50%);
+        padding: 10px;
+        border-radius: 75px;
     }
 
     .nav-links {
@@ -58,7 +70,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #2F195F;
+        background: var(--text-colour);
         transition: width 0.3s ease;
     }
 
@@ -73,8 +85,8 @@
         justify-content: center;
         padding: 0 50px;
         position: relative;
-        background: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);
-        color: #000000;
+        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
+        color: var(--text-colour);
     }
 
     .hero-content {
@@ -124,8 +136,8 @@
 
     .btn {
         background: transparent;
-        color: #000000;
-        border: 2px solid #000000;
+        color: var(--text-colour);
+        border: 2px solid var(--text-colour);
         padding: 15px 35px;
         font-size: 16px;
         border-radius: 50px;
@@ -137,8 +149,8 @@
     }
 
     .btn:hover {
-        background: #000000;
-        color: #7353ba;
+        background: var(--text-colour);
+        color: var(--primary-colour);
         transform: translateY(-3px);
     }
 
@@ -183,6 +195,11 @@
         animation-delay: 4s;
     }
 
+    hr {
+    display: block;
+    border-top: 20px solid #ccc;
+    }
+
     @keyframes float {
         0%, 100% {
             transform: translateY(0) rotate(0deg);
@@ -200,13 +217,13 @@
         font-size: 42px;
         text-align: center;
         margin-bottom: 60px;
-        color: #ffffff;
+        color: var(--text-colour);
         font-weight: 700;
         text-decoration: underline;
     }
 
     .section-title span {
-        color: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);
+        color: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
     }
 
     /* About Section */
@@ -217,13 +234,13 @@
         justify-content: center;
         padding: 0 50px;
         position: relative;
-        background: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);
-        color: #000000;
+        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
+        color: var(--text-colour);
     }
 
     .about-content {
-        padding-left: 10px;
-        background: #0000003b;
+        padding: 10px;
+        background: #ffffff2b;
         max-width: 900px;
         margin: 0 auto;
         display: grid;
@@ -233,15 +250,15 @@
     }
 
     .about-text h3 {
-        font-size: 28px;
+        font-size: 26px;
         margin-bottom: 20px;
-        color: #7353BA;
+        color: var(--text-colour);
     }
 
     .about-text p {
         font-size: 18px;
         line-height: 1.8;
-        color: #ffffff;
+        color: var(--text-colour);
         margin-bottom: 15px;
     }
 
@@ -255,7 +272,7 @@
 
     /* Projects Section */
     #work {
-        background: #000000;
+        background: var(--background-colour);
     }
 
     .projects-grid {
@@ -267,7 +284,7 @@
     }
 
     .project-card {
-        background: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);
+        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -277,13 +294,13 @@
 
     .project-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.564);
     }
 
     .project-image {
         width: 100%;
         height: 200px;
-        background: #494949;
+        background: #000;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -299,12 +316,12 @@
     .project-content h3 {
         font-size: 22px;
         margin-bottom: 10px;
-        color: #ffffff;
+        color: var(--text-colour);
     }
 
     .project-content p {
         font-size: 16px;
-        color: #ffffff;
+        color: var(--text-colour);
         line-height: 1.6;
         margin-bottom: 15px;
     }
@@ -316,17 +333,17 @@
     }
 
     .tag {
-        background: #2f195f;
+        background: var(--secondary-colour);
         padding: 5px 12px;
         border-radius: 20px;
         font-size: 14px;
-        color: #fff;
+        color: var(--text-colour);
         font-weight: 500;
     }
 
     /* Skills Section */
     #skills {
-        background: #000000;
+        background: var(--background-colour);
     }
 
     .skills-grid {
@@ -338,16 +355,16 @@
     }
 
     .skill-category {
-        background: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);;
+        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);;
         padding: 30px;
         border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.564);
     }
 
     .skill-category h3 {
         font-size: 22px;
         margin-bottom: 20px;
-        color: #ffffff;
+        color: var(--text-colour);
     }
 
     .skill-category ul {
@@ -357,8 +374,8 @@
     .skill-category li {
         padding: 10px 0;
         font-size: 16px;
-        color: #ffffff;
-        border-bottom: 1px solid #f0f0f0;
+        color: var(--text-colour);
+        border-bottom: 1px solid var(--text-colour);
     }
 
     .skill-category li:last-child {
@@ -367,12 +384,12 @@
 
     /* Contact Section */
     #contact {
-        background: linear-gradient(135deg, #2f195f 0%, #7353ba 100%);
-        color: #fff;
+        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
+        color: var(--text-colour);
     }
 
     #contact .section-title {
-        color: #fff;
+        color: var(--text-colour);
     }
 
     .contact-content {
@@ -426,18 +443,18 @@
     }
 
     .contact-link {
-        color: #fff;
+        color: var(--text-colour);
         text-decoration: none;
         font-size: 18px;
         padding: 10px 20px;
-        border: 2px solid #fff;
+        border: 2px solid var(--text-colour);
         border-radius: 50px;
         transition: all 0.3s ease;
     }
 
     .contact-link:hover {
-        background: #fff;
-        color: #2f195f;
+        background: var(--secondary-colour);
+        color: var(--background-colour);
         transform: translateY(-3px);
     }
 
@@ -445,8 +462,8 @@
         background: #333;
         color: #fff;
         text-align: center;
-        padding: 30px;
-        font-size: 14px;
+        padding: 5px;
+        font-size: 13px;
     }
 
     @media (max-width: 768px) {
@@ -486,8 +503,8 @@
     .project-link {
         display: inline-block;
         padding: 8px 16px;
-        background: #2f195f;
-        color: #fff;
+        background: var(--secondary-colour);
+        color: var(--text-colour);
         text-decoration: none;
         border-radius: 5px;
         font-size: 14px;
@@ -495,6 +512,6 @@
     }
 
     .project-link:hover {
-        background: #0f1020;
+        background: var(--background-colour);
         transform: translateY(-2px);
     }
