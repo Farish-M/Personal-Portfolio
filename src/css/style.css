@@ -139,7 +139,7 @@
 
     hr {
     display: block;
-    border-top: 20px solid #ccc;
+    border: 20px solid #ccc;
     }
 
     @keyframes float {
@@ -308,6 +308,10 @@
         color: var(--primary-colour);
         transition: transform 0.3s ease, color 0.3s ease;
         margin: 1rem 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
     }
 
     .skill:hover i {
@@ -463,4 +467,25 @@
     .project-link:hover {
         background: var(--background-colour);
         transform: translateY(-2px);
+    }
+
+    .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 8px;
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        margin-right: 6px;
+        font-size: 0.85rem;
+    }
+
+    .tag i {
+        font-size: 1rem;
+    }
+
+    .tag-img {
+        width: 1em;
+        height: 1em;
+        object-fit: contain;
     }
