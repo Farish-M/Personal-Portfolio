@@ -1,6 +1,3 @@
-// Projects Data
-// Add, edit, or remove projects here - they'll automatically update on your site!
-
 const projects = [
     {
         title: "E-Commerce Platform",

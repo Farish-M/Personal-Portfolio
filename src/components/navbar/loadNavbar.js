@@ -25,7 +25,7 @@ function highlightActivePage() {
         const linkPage = link.getAttribute('href').split('/').pop().split('#')[0] || 'index.html';
         
         if (linkPage === currentPage) {
-            link.style.color = '#667eea';
+            link.style.color = '#000';
             link.style.fontWeight = '700';
         }
     });
