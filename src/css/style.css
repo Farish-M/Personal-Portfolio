@@ -282,45 +282,56 @@
     }
 
     #skills {
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
         background: var(--background-colour);
     }
 
     .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        max-width: 1000px;
-        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    .skill-category {
-        background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.564);
+    .skill {
+        position: relative;
+        display: inline-block;
     }
 
-    .skill-category h3 {
-        font-size: 22px;
-        margin-bottom: 20px;
-        color: var(--text-colour);
+    .skill i {
+        font-size: 3rem;
+        color: var(--primary-colour);
+        transition: transform 0.3s ease, color 0.3s ease;
+        margin: 1rem 0;
     }
 
-    .skill-category ul {
-        list-style: none;
+    .skill:hover i {
+        transform: scale(1.2);
+        color: var(--secondary-colour)
     }
 
-    .skill-category li {
-        padding: 10px 0;
-        font-size: 16px;
-        color: var(--text-colour);
-        border-bottom: 1px solid var(--text-colour);
+    .tooltiptext {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.3s ease;
+        font-size: 1.5rem;
+        color: var(--primary-colour);
     }
 
-    .skill-category li:last-child {
-        border-bottom: none;
+    .skill:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
     }
-
+    
     #contact {
         background: linear-gradient(135deg, var(--secondary-colour) 0%, var(--primary-colour) 100%);
         color: var(--text-colour);
