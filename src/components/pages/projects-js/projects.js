@@ -1,5 +1,15 @@
 // Main JavaScript - Handles dynamic project rendering
 
+// Map tag names to icons (Font Awesome, SVG, or images)
+const tagIconMap = {
+    "React": '<i class="fab fa-react"></i>',
+    "Django": '<img src="../public/assets/icons/django.png" class="tag-img" alt="Django logo">',
+    "C#": '<i class="devicon-csharp-plain"></i>',
+    "HLSL": '<i class="fas fa-code"></i>',
+    "Godot": '<i class="devicon-godot-plain"></i>'
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
 });
@@ -52,13 +62,24 @@ function createProjectCard(project) {
     const tagsDiv = document.createElement('div');
     tagsDiv.className = 'project-tags';
     
-    // Add each tag
     project.tags.forEach(tagText => {
         const tag = document.createElement('span');
         tag.className = 'tag';
-        tag.textContent = tagText;
+
+        const iconHTML = tagIconMap[tagText]; // find icon in map
+
+        if (iconHTML) {
+            tag.innerHTML = `${iconHTML} <span class="tag-label">${tagText}</span>`;
+        } else {
+            tag.textContent = tagText; // fallback
+        }
+
+        tag.setAttribute('title', tagText);
+        tag.setAttribute('aria-label', tagText);
+
         tagsDiv.appendChild(tag);
     });
+
     
     // Optional: Add links if provided
     if (project.liveLink || project.githubLink) {
@@ -72,7 +93,7 @@ function createProjectCard(project) {
             const liveLink = document.createElement('a');
             liveLink.href = project.liveLink;
             liveLink.target = '_blank';
-            liveLink.textContent = '🔗 Live Demo';
+            liveLink.innerHTML = '<i class="fas fa-play-circle"></i> Live Demo';
             liveLink.className = 'project-link';
             linksDiv.appendChild(liveLink);
         }
@@ -81,7 +102,7 @@ function createProjectCard(project) {
             const githubLink = document.createElement('a');
             githubLink.href = project.githubLink;
             githubLink.target = '_blank';
-            githubLink.textContent = '💻 GitHub';
+            githubLink.innerHTML = '<i class="fab fa-github"></i> GitHub';
             githubLink.className = 'project-link';
             linksDiv.appendChild(githubLink);
         }
