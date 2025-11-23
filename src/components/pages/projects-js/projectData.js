@@ -6,12 +6,4 @@ const projects = [
         tags: ["React", "Molstar", "SAV", "Django"],
         githubLink: "https://github.com/marcellszi/RNA3DB-visualisations-project"
     },
-    {
-        title: "3D Pixel Art Game",
-        description: "A 3D game with a 3D pixel art style, with a parry w",
-        image: "path/to/image.jpg",
-        tags: ["C#", "Unity"],
-        liveLink: "https://yourproject.com",
-        githubLink: "https://github.com/yourusername/project"
-    }
 ];
