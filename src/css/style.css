@@ -295,7 +295,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2rem;
+        gap: 5rem;
+        padding-left: 8em;
+        padding-right: 8em;
     }
 
     .skill {
@@ -304,7 +306,7 @@
     }
 
     .skill i {
-        font-size: 3rem;
+        font-size: 5rem;
         color: var(--primary-colour);
         transition: transform 0.3s ease, color 0.3s ease;
         margin: 1rem 0;
@@ -315,15 +317,15 @@
     }
 
     .skill:hover i {
-        transform: scale(1.2);
-        color: var(--secondary-colour)
+        transform: scale(1.5);
+        color: var(--primary-colour)
     }
 
     .tooltiptext {
         visibility: hidden;
         opacity: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -1.5em;
         left: 50%;
         transform: translateX(-50%);
         transition: opacity 0.3s ease;
