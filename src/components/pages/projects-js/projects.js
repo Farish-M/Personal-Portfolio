@@ -6,7 +6,7 @@ const tagIconMap = {
     "Django": '<img src="../public/assets/icons/django.png" class="tag-img" alt="Django logo">',
     "C#": '<i class="devicon-csharp-plain"></i>',
     "HLSL": '<i class="fas fa-code"></i>',
-    "Unity": '<i class="fab fa-unity"></i>'
+    "Godot": '<i class="devicon-godot-plain"></i>'
 };
 
 

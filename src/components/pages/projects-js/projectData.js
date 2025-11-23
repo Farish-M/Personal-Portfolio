@@ -7,10 +7,10 @@ const projects = [
         githubLink: "https://github.com/marcellszi/RNA3DB-visualisations-project"
     },
     {
-        title: "3D Pixel Art Shader",
-        description: "A computer shader paired with a pixelating camera in Unity, which creates a 3D pixel art stylised graphics for games. It uses HLSL language and Unity's inbuilt shader language.",
+        title: "3D Pixel Art Game",
+        description: "A 3D game with a 3D pixel art style, with a parry w",
         image: "path/to/image.jpg",
-        tags: ["C#", "HLSL", "Unity"],
+        tags: ["C#", "Unity"],
         liveLink: "https://yourproject.com",
         githubLink: "https://github.com/yourusername/project"
     }
