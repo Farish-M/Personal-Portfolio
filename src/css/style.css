@@ -295,7 +295,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5rem;
+        gap: 3rem;
         padding-left: 8em;
         padding-right: 8em;
     }
@@ -306,7 +306,7 @@
     }
 
     .skill i {
-        font-size: 5rem;
+        font-size: 3rem;
         color: var(--primary-colour);
         transition: transform 0.3s ease, color 0.3s ease;
         margin: 1rem 0;
@@ -318,7 +318,6 @@
 
     .skill:hover i {
         transform: scale(1.5);
-        color: var(--primary-colour)
     }
 
     .tooltiptext {
