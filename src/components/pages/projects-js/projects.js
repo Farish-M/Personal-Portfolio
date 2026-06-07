@@ -3,7 +3,7 @@
 // Map tag names to icons (Font Awesome, SVG, or images)
 const tagIconMap = {
     "React": '<i class="fab fa-react"></i>',
-    "Django": '<img src="../public/assets/icons/django.png" class="tag-img" alt="Django logo">',
+    "Django": '<img src="public/assets/icons/django.png" class="tag-img" alt="Django logo">',
     "C#": '<i class="devicon-csharp-plain"></i>',
     "HLSL": '<i class="fas fa-code"></i>',
     "Godot": '<i class="devicon-godot-plain"></i>'
