@@ -3,7 +3,7 @@
 
 async function loadNavbar() {
     try {
-        const response = await fetch('/src/components/navbar.html');
+        const response = await fetch('src/components/navbar.html');
         const navbarHTML = await response.text();
         
         // Insert navbar at the beginning of body
