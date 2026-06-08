@@ -221,8 +221,8 @@
     
     /* Selects <p> elements with "about-text" class */
     .about-text p {
-        font-size: 18px;
-        line-height: 1.8;
+        font-size: 15px;
+        line-height: 1.2;
         color: var(--text-colour);
         margin-bottom: 15px;
     }
